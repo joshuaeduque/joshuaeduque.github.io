@@ -49,7 +49,7 @@
 			class="flex flex-row justify-center"
 		>
 			<a href="https://github.com/joshuaeduque" target="_blank">
-				<img class="github-responsive" src="/images/github-mark.svg" alt="GitHub logo" />
+				<img class="github-responsive brightness-0" src="/images/github-mark.svg" alt="GitHub logo" />
 			</a>
 		</div>
 	</section>
