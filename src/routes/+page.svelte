@@ -14,7 +14,7 @@
 </script>
 
 {#if mounted}
-	<section class="grid content-center p-4 w-screen max-w-full h-screen gap-y-6">
+	<section class="grid overflow-x-hidden content-center p-4 w-screen max-w-full h-screen gap-y-6">
 		<p
 			in:fly={{ duration: duration, easing: expoOut, y: -100 }}
 			class="font-librebarcode name-responsive"
