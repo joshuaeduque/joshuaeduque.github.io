@@ -4,6 +4,7 @@
 	import { fly } from 'svelte/transition';
 
 	const duration = 1000;
+	const projects = ['Project Name', 'Project Name', 'Project Name', 'Project Name'];
 
 	let mounted = false;
 
@@ -33,13 +34,20 @@
 
 		<div in:fly={{ duration: duration, easing: expoOut, x: 100 }}>
 			<p class="font-roboto header-responsive">PROJECTS</p>
-			<p class="font-roboto-mono text-responsive">Project Name</p>
-			<p class="font-roboto-mono text-responsive">Project Name</p>
-			<p class="font-roboto-mono text-responsive">Project Name</p>
-			<p class="font-roboto-mono text-responsive">Project Name</p>
+
+			{#each projects as project}
+				<p
+					class="text-responsive px-1 w-fit font-roboto-mono transition hover:bg-black hover:text-white"
+				>
+					{project}
+				</p>
+			{/each}
 		</div>
 
-		<div in:fly={{ duration: duration, easing: expoOut, y: 100 }} class="flex flex-row justify-center">
+		<div
+			in:fly={{ duration: duration, easing: expoOut, y: 100 }}
+			class="flex flex-row justify-center"
+		>
 			<a href="https://github.com/joshuaeduque" target="_blank">
 				<img class="github-responsive" src="/images/github-mark.svg" alt="GitHub logo" />
 			</a>
