@@ -3,6 +3,8 @@
 	import { expoOut } from 'svelte/easing';
 	import { fly } from 'svelte/transition';
 
+	const duration = 1000;
+
 	let mounted = false;
 
 	onMount(() => {
@@ -12,11 +14,14 @@
 
 {#if mounted}
 	<section class="grid content-center p-4 w-screen max-w-full h-screen gap-y-6">
-		<p in:fly={{ easing: expoOut, y: -100 }} class="font-librebarcode name-responsive">
+		<p
+			in:fly={{ duration: duration, easing: expoOut, y: -100 }}
+			class="font-librebarcode name-responsive"
+		>
 			JOSHUA DUQUE
 		</p>
 
-		<div in:fly={{ easing: expoOut, x: -100 }}>
+		<div in:fly={{ duration: duration, easing: expoOut, x: -100 }}>
 			<p class="font-roboto header-responsive">ABOUT ME</p>
 			<p class="font-roboto-mono text-responsive">
 				My name's Joshua Duque and I'm a computer science student at UTSA. Software became my
@@ -26,7 +31,7 @@
 			</p>
 		</div>
 
-		<div in:fly={{ easing: expoOut, x: 100 }}>
+		<div in:fly={{ duration: duration, easing: expoOut, x: 100 }}>
 			<p class="font-roboto header-responsive">PROJECTS</p>
 			<p class="font-roboto-mono text-responsive">Project Name</p>
 			<p class="font-roboto-mono text-responsive">Project Name</p>
@@ -34,7 +39,7 @@
 			<p class="font-roboto-mono text-responsive">Project Name</p>
 		</div>
 
-		<div in:fly={{ easing: expoOut, y: 100 }} class="flex flex-row justify-center">
+		<div in:fly={{ duration: duration, easing: expoOut, y: 100 }} class="flex flex-row justify-center">
 			<a href="https://github.com/joshuaeduque" target="_blank">
 				<img class="github-responsive" src="/images/github-mark.svg" alt="GitHub logo" />
 			</a>
