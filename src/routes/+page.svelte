@@ -4,7 +4,10 @@
 	import { fly } from 'svelte/transition';
 
 	const duration = 1000;
-	const projects = ['Project Name', 'Project Name', 'Project Name', 'Project Name'];
+	const projects = [
+		{ name: 'DragonScroll', link: 'https://github.com/joshuaeduque/DragonScroll' },
+		{ name: 'T6Injector', link: 'https://github.com/joshuaeduque/T6Injector' }
+	];
 
 	let mounted = false;
 
@@ -36,11 +39,13 @@
 			<p class="font-roboto header-responsive">PROJECTS</p>
 
 			{#each projects as project}
-				<p
-					class="text-responsive px-1 w-fit font-roboto-mono transition hover:bg-black hover:text-white"
-				>
-					{project}
-				</p>
+				<a href={project.link}>
+					<p
+						class="text-responsive px-1 w-fit font-roboto-mono transition hover:bg-black hover:text-white"
+					>
+						{project.name}
+					</p>
+				</a>
 			{/each}
 		</div>
 
@@ -49,7 +54,11 @@
 			class="flex flex-row justify-center"
 		>
 			<a href="https://github.com/joshuaeduque" target="_blank">
-				<img class="github-responsive brightness-0" src="/images/github-mark.svg" alt="GitHub logo" />
+				<img
+					class="github-responsive brightness-0"
+					src="/images/github-mark.svg"
+					alt="GitHub logo"
+				/>
 			</a>
 		</div>
 	</section>
