@@ -5,6 +5,7 @@
 
 	const duration = 1000;
 	const projects = [
+		{ name: 'PS3MAPI', link: 'https://github.com/joshuaeduque/PS3MAPI' },
 		{ name: 'DragonScroll', link: 'https://github.com/joshuaeduque/DragonScroll' },
 		{ name: 'T6Injector', link: 'https://github.com/joshuaeduque/T6Injector' }
 	];
