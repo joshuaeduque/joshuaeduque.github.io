@@ -21,8 +21,7 @@
 	<section class="grid overflow-x-hidden content-center p-4 w-screen max-w-full h-screen gap-y-6">
 		<p
 			in:fly={{ duration: duration, easing: expoOut, y: -100 }}
-			class="font-librebarcode name-responsive"
-		>
+			class="font-librebarcode name-responsive">
 			JOSHUA DUQUE
 		</p>
 
@@ -40,26 +39,21 @@
 			<p class="font-roboto header-responsive">PROJECTS</p>
 
 			{#each projects as project}
-				<a href={project.link}>
-					<p
-						class="text-responsive px-1 w-fit font-roboto-mono transition hover:bg-black hover:text-white"
-					>
-						{project.name}
-					</p>
-				</a>
+				<p
+					class="text-responsive px-1 w-fit font-roboto-mono transition hover:bg-black hover:text-white">
+					<a href={project.link}>{project.name}</a>
+				</p>
 			{/each}
 		</div>
 
 		<div
 			in:fly={{ duration: duration, easing: expoOut, y: 100 }}
-			class="flex flex-row justify-center"
-		>
+			class="flex flex-row justify-center">
 			<a href="https://github.com/joshuaeduque" target="_blank">
 				<img
 					class="github-responsive brightness-0"
 					src="/images/github-mark.svg"
-					alt="GitHub logo"
-				/>
+					alt="GitHub logo" />
 			</a>
 		</div>
 	</section>
