@@ -1,18 +1,28 @@
 {#if mounted}
-	<div class="h-screen p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
+	<div class="h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
 		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
-				<p class="font-librebarcode text-7xl">JOSHUA DUQUE</p>
-				<p class="font-notosansmono-condensed">
-					cs major at utsa that's loved tech from a young age.
+				<p
+					transition:fly={{ y: -100, easing: expoOut, duration: 1000 }}
+					class="font-librebarcode text-7xl">
+					JOSHUA DUQUE
 				</p>
-				<p class="font-notosansmono-condensed">wannabe full stack developer.</p>
-				<p class="font-notosansmono-condensed">i really like sony's playstation 3.</p>
-				<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
-					<a href="https://google.com" target="_blank">about me</a>
-				</p>
-				<div class="flex gap-4">
-					<a href="https://github.com/joshuaeduque"target="_blank">
+
+				<div
+					transition:fly={{ x: -100, easing: expoOut, duration: 1000 }}
+					class="flex flex-col gap-4">
+					<p class="font-notosansmono-condensed">
+						cs major at utsa that's loved tech from a young age.
+					</p>
+					<p class="font-notosansmono-condensed">wannabe full stack developer.</p>
+					<p class="font-notosansmono-condensed">i really like sony's playstation 3.</p>
+					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
+						<a href="https://google.com" target="_blank">about me</a>
+					</p>
+				</div>
+
+				<div transition:fly={{ y: 100, easing: expoOut, duration: 1000 }} class="flex gap-4">
+					<a href="https://github.com/joshuaeduque" target="_blank">
 						<!-- Keep title and alt the same for accessibility -->
 						<img
 							class="w-10 contrast-200 transition hover:scale-110"
@@ -30,7 +40,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="h-fit flex flex-col gap-4">
+		<div
+			transition:fly={{ x: 100, easing: expoOut, duration: 1000 }}
+			class="h-fit flex flex-col gap-4">
 			<p class="font-notosansmono-condensed font-bold">projects</p>
 			<div>
 				<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
@@ -115,6 +127,8 @@
 
 	import githubIcon from '$lib/images/github-icon.svg';
 	import emailIcon from '$lib/images/email-icon.svg';
+	import { fly } from 'svelte/transition';
+	import { expoOut } from 'svelte/easing';
 
 	let mounted = false;
 
