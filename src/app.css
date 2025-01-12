@@ -2,6 +2,10 @@
 @tailwind components;
 @tailwind utilities;
 
+html {
+    scroll-behavior: smooth;
+}
+
 @font-face {
     font-family: 'LibreBarcode128Text';
     src: url('$lib/fonts/LibreBarcode128Text-Regular.ttf') format('truetype');
