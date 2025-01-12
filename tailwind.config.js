@@ -7,7 +7,8 @@ export default {
       'roboto': 'Roboto',
       'roboto-light': 'Roboto-Light',
       'roboto-thin': 'Roboto-Thin',
-      'roboto-mono': 'RobotoMono'
+      'roboto-mono': 'RobotoMono',
+      'notosansmono-condensed': 'NotoSansMono-Condensed'
     },
     extend: {},
     screens: {
