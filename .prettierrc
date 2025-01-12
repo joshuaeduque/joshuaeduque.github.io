@@ -5,6 +5,8 @@
 	"printWidth": 100,
 	"svelteAllowShorthand": false,
 	"svelteBracketNewLine": false,
+	"svelteIndentScriptAndStyle": true,
+	"svelteSortOrder": "markup-styles-options-scripts",
 	"plugins": ["prettier-plugin-svelte"],
 	"overrides": [{ "files": "*.svelte", "options": { "parser": "svelte" } }]
 }

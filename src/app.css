@@ -34,3 +34,14 @@
     font-style: normal;
     font-weight: normal;
 }
+
+@font-face {
+    font-family: 'NotoSansMono-Condensed';
+    src: url('/fonts/NotoSansMono-Condensed-Regular.ttf') format('truetype');
+    font-style: normal;
+    font-weight: normal;
+}
+
+* {
+    outline: 1px solid red;
+}
