@@ -168,7 +168,8 @@
 
 	let mounted = false;
 
-	onMount(() => {
+	onMount(async () => {
+		await document.fonts.ready;
 		mounted = true;
 	});
 </script>
