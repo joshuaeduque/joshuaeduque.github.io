@@ -12,17 +12,19 @@
 					<a href="https://google.com" target="_blank">about me</a>
 				</p>
 				<div class="flex gap-4">
-					<a href="https://github.com/joshuaeduque" target="_blank">
+					<a href="https://github.com/joshuaeduque"target="_blank">
 						<img
 							class="w-10 contrast-200 transition hover:scale-110"
 							src={githubIcon}
-							alt="GitHub icon" />
+							title="GitHub link"
+							alt="GitHub link" />
 					</a>
 					<a href="mailto:joshuaeduque@gmail.com">
 						<img
 							class="w-10 contrast-200 transition hover:scale-110"
 							src={emailIcon}
-							alt="Email icon" />
+							title="Email link"
+							alt="Email link" />
 					</a>
 				</div>
 			</div>
