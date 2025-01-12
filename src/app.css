@@ -4,44 +4,14 @@
 
 @font-face {
     font-family: 'LibreBarcode128Text';
-    src: url('/fonts/LibreBarcode128Text-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Roboto';
-    src: url('/fonts/Roboto-Regular.ttf') format('truetype');
-    font-style: normal;
-    font-weight: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Thin';
-    src: url('/fonts/Roboto-Thin.ttf') format('truetype');
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'Roboto-Light';
-    src: url('/fonts/Roboto-Light.ttf') format('truetype');
-    font-style: normal;
-}
-
-@font-face {
-    font-family: 'RobotoMono';
-    src: url('/fonts/RobotoMono-Regular.ttf') format('truetype');
+    src: url('$lib/fonts/LibreBarcode128Text-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
 }
 
 @font-face {
     font-family: 'NotoSansMono-Condensed';
-    src: url('/fonts/NotoSansMono-Condensed-Regular.ttf') format('truetype');
+    src: url('$lib/fonts/NotoSansMono-Condensed-Regular.ttf') format('truetype');
     font-style: normal;
     font-weight: normal;
-}
-
-* {
-    outline: 1px solid red;
 }
