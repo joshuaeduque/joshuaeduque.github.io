@@ -13,7 +13,6 @@
 		"deploy": "gh-pages -d build -t --nojekyll"
 	},
 	"devDependencies": {
-		"@sveltejs/adapter-auto": "^3.0.0",
 		"@sveltejs/adapter-static": "^3.0.5",
 		"@sveltejs/kit": "^2.0.0",
 		"@sveltejs/vite-plugin-svelte": "^3.0.0",
@@ -27,7 +26,6 @@
 		"postcss": "^8.4.47",
 		"prettier": "^3.1.1",
 		"prettier-plugin-svelte": "^3.1.2",
-		"sass-embedded": "^1.83.1",
 		"svelte": "^4.2.7",
 		"svelte-check": "^4.0.0",
 		"tailwindcss": "^3.4.14",
