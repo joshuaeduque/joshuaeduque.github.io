@@ -1,6 +1,6 @@
 {#if mounted}
 	<div class="h-screen p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
-		<div class="h-fit flex justify-center">
+		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
 				<p class="font-librebarcode text-7xl">JOSHUA DUQUE</p>
 				<p class="font-notosansmono-condensed">
@@ -13,6 +13,7 @@
 				</p>
 				<div class="flex gap-4">
 					<a href="https://github.com/joshuaeduque"target="_blank">
+						<!-- Keep title and alt the same for accessibility -->
 						<img
 							class="w-10 contrast-200 transition hover:scale-110"
 							src={githubIcon}
