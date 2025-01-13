@@ -20,9 +20,14 @@
 					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
 						<a href="#about-me">about me</a>
 					</p>
+					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
+						<a href="/resume">resume</a>
+					</p>
 				</div>
 
-				<div in:fly={{ y: 100, easing: expoOut, duration: 1000, opacity: 0.001 }} class="flex gap-4">
+				<div
+					in:fly={{ y: 100, easing: expoOut, duration: 1000, opacity: 0.001 }}
+					class="flex gap-4">
 					<a href="https://github.com/joshuaeduque" target="_blank">
 						<!-- Keep title and alt the same for accessibility -->
 						<img
