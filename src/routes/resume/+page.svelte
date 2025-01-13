@@ -1,8 +1,13 @@
-<div class="h-screen flex justify-center">
-	<!-- Google Drive embed -->
-	<iframe
-		class="h-full w-full"
-		title="Joshua Duque resume"
-		src="https://docs.google.com/document/d/e/2PACX-1vROrZWSg2nWbOaDvwBNaLO-RjN6lAix1UVy3qKcZ-zd36nmzOizoL0oP_0DOin1myqMNTOZW2hl1_tH/pub?embedded=true"
-	></iframe>
-</div>
+<!-- The data prop should be an empty string by default but the compiler requires it for some reason -->
+<PdfViewer
+	url={resume}
+	data={''}
+	showButtons={['rotate', 'download']}
+	showTopButton={false}
+	downloadFileName={'JOSHUAEDUQUE RESUME.pdf'}></PdfViewer>
+
+<script>
+	import PdfViewer from 'svelte-pdf';
+
+	import resume from '$lib/files/resume.pdf'
+</script>
