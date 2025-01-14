@@ -15,7 +15,7 @@
 					<p class="font-notosansmono-condensed">
 						cs major at utsa that's loved tech from a young age.
 					</p>
-					<p class="font-notosansmono-condensed">wannabe full stack developer.</p>
+					<p class="font-notosansmono-condensed">aspiring full stack developer.</p>
 					<p class="font-notosansmono-condensed">i really like sony's playstation 3.</p>
 					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
 						<a href="#about-me">about me</a>
