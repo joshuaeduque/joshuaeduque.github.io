@@ -1,18 +1,18 @@
 {#if mounted}
 	<div
-		in:fade={{ duration: 1000 }}
+		in:fade={{ delay: 150 }}
 		class="h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
 		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
 				<!-- Apparently adding opacity to transitions fixes some choppiness -->
 				<p
-					in:fly={{ y: -100, easing: expoOut, duration: 1000, opacity: 0.001 }}
+					in:fly={{ y: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 					class="font-librebarcode text-7xl">
 					JOSHUA DUQUE
 				</p>
 
 				<div
-					in:fly={{ x: -100, easing: expoOut, duration: 1000, opacity: 0.001 }}
+					in:fly={{ x: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 					class="flex flex-col gap-4">
 					<p class="font-notosansmono-condensed">
 						cs major at utsa that's loved tech from a young age.
@@ -28,7 +28,7 @@
 				</div>
 
 				<div
-					in:fly={{ y: 100, easing: expoOut, duration: 1000, opacity: 0.001 }}
+					in:fly={{ y: 100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 					class="flex gap-4">
 					<a href="https://github.com/joshuaeduque" target="_blank">
 						<!-- Keep title and alt the same for accessibility -->
@@ -49,7 +49,7 @@
 			</div>
 		</div>
 		<div
-			in:fly={{ x: 100, easing: expoOut, duration: 1000, opacity: 0.001 }}
+			in:fly={{ x: 100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 			class="h-fit flex flex-col gap-4">
 			<p class="font-notosansmono-condensed font-bold">projects</p>
 			<div>
@@ -125,6 +125,8 @@
 	import emailIcon from '$lib/images/email-icon.svg';
 	import { fade, fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
+
+	const flyDuration = 1000;
 
 	let mounted = false;
 
