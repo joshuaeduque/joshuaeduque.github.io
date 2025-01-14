@@ -1,5 +1,7 @@
 {#if mounted}
-	<div class="h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
+	<div
+		in:fade={{ duration: 1000 }}
+		class="h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
 		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
 				<!-- Apparently adding opacity to transitions fixes some choppiness -->
@@ -121,7 +123,7 @@
 
 	import githubIcon from '$lib/images/github-icon.svg';
 	import emailIcon from '$lib/images/email-icon.svg';
-	import { fly } from 'svelte/transition';
+	import { fade, fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 
 	let mounted = false;
