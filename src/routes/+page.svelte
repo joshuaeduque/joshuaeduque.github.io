@@ -17,12 +17,14 @@
 					class="flex flex-col gap-4">
 					<p class="font-notosansmono-condensed">cs undergraduate at utsa.</p>
 					<p class="font-notosansmono-condensed">full stack developer.</p>
-					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
-						<a href="/resume">resume</a>
-					</p>
-					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
-						<a href="#about-me">about me</a>
-					</p>
+					<div class="flex gap-4">
+						<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
+							<a href="/resume">resume</a>
+						</p>
+						<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
+							<a href="#about-me">about me</a>
+						</p>
+					</div>
 				</div>
 
 				<div
