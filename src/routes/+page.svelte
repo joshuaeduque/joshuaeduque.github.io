@@ -138,7 +138,7 @@
 
 	const flyDuration = 1000;
 
-	let mounted = false;
+	let mounted = $state(false);
 
 	onMount(async () => {
 		await document.fonts.ready;
