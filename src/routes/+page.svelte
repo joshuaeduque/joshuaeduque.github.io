@@ -1,7 +1,9 @@
 {#if mounted}
+	<!-- Landing -->
 	<div
 		in:fade={{ delay: 150 }}
-		class="min-h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
+		class="min-h-screen overflow-hidden p-4 grid content-evenly gap-4 sm:grid-cols-2 sm:items-center">
+		<!-- Left / top landing section -->
 		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
 				<div in:fly={{ y: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}>
@@ -44,9 +46,11 @@
 				</div>
 			</div>
 		</div>
+		<!-- Right / bottom landing section -->
 		<div
 			in:fly={{ x: 100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 			class="h-fit flex flex-col gap-4">
+			<!-- Skills section -->
 			<div class="flex flex-col gap-4">
 				<p class="font-notosansmono-condensed font-bold">skills</p>
 				<div class="flex flex-row flex-wrap gap-4">
@@ -123,9 +127,10 @@
 					</LanguageSkill>
 				</div>
 			</div>
+			<!-- Projects section -->
 			<div class="flex flex-col gap-4">
 				<p class="font-notosansmono-condensed font-bold">projects</p>
-				<div>
+				<div class="">
 					<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
 						<a href="https://github.com/joshuaeduque/ps3mapi" target="_blank">PS3MAPI</a>
 					</p>
