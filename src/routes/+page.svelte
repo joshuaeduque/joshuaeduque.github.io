@@ -1,27 +1,20 @@
 {#if mounted}
 	<div
 		in:fade={{ delay: 150 }}
-		class="h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
+		class="min-h-screen overflow-hidden p-4 grid content-evenly sm:grid-cols-2 sm:items-center">
 		<div class="h-fit flex sm:justify-center">
 			<div class="flex flex-col justify-center gap-4">
-				<!-- Apparently adding opacity to transitions fixes some choppiness -->
-				<p
-					in:fly={{ y: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
-					class="font-librebarcode text-7xl">
-					JOSHUA DUQUE
-				</p>
+				<div in:fly={{ y: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}>
+					<!-- Apparently adding opacity to transitions fixes some choppiness -->
+					<p class="font-librebarcode text-7xl">JOSHUA DUQUE</p>
+					<p class="font-notosansmono-condensed">San Antonio, TX | joshuaeduque@gmail.com</p>
+				</div>
 
 				<div
 					in:fly={{ x: -100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 					class="flex flex-col gap-4">
-					<p class="font-notosansmono-condensed">
-						cs major at utsa that's loved tech from a young age.
-					</p>
-					<p class="font-notosansmono-condensed">aspiring full stack developer.</p>
-					<p class="font-notosansmono-condensed">i really like sony's playstation 3.</p>
-					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
-						<a href="#about-me">about me</a>
-					</p>
+					<p class="font-notosansmono-condensed">cs undergraduate at utsa.</p>
+					<p class="font-notosansmono-condensed">full stack developer.</p>
 					<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
 						<a href="/resume">resume</a>
 					</p>
@@ -33,14 +26,14 @@
 					<a href="https://github.com/joshuaeduque" target="_blank">
 						<!-- Keep title and alt the same for accessibility -->
 						<img
-							class="w-10 contrast-200 transition hover:scale-110"
+							class="w-10 brightness-0 transition hover:scale-110"
 							src={githubIcon}
 							title="GitHub link"
 							alt="GitHub link" />
 					</a>
 					<a href="mailto:joshuaeduque@gmail.com">
 						<img
-							class="w-10 contrast-200 transition hover:scale-110"
+							class="w-10 transition hover:scale-110"
 							src={emailIcon}
 							title="Email link"
 							alt="Email link" />
@@ -51,70 +44,112 @@
 		<div
 			in:fly={{ x: 100, easing: expoOut, duration: flyDuration, opacity: 0.001 }}
 			class="h-fit flex flex-col gap-4">
-			<p class="font-notosansmono-condensed font-bold">projects</p>
-			<div>
-				<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
-					<a href="https://github.com/joshuaeduque/ps3mapi" target="_blank">PS3MAPI</a>
-				</p>
-				<p class="font-notosansmono-condensed">
-					Remote communications library for Sony's PlayStation 3 written in C#
-				</p>
-			</div>
+			<div class="flex flex-col gap-4">
+				<p class="font-notosansmono-condensed font-bold">skills</p>
+				<div class="flex flex-row flex-wrap gap-4">
+					<LanguageSkill text="C#">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<path fill="#9B4F96" d="M115.4 30.7L67.1 2.9c-.8-.5-1.9-.7-3.1-.7-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.4 1 3.5l106.8-62c-.6-1.2-1.5-2.1-2.4-2.7z"></path><path fill="#68217A" d="M10.7 95.3c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7 1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c0-.9-.1-1.9-.6-2.8l-106.6 62z"></path><path fill="#fff" d="M85.3 76.1C81.1 83.5 73.1 88.5 64 88.5c-13.5 0-24.5-11-24.5-24.5s11-24.5 24.5-24.5c9.1 0 17.1 5 21.3 12.5l13-7.5c-6.8-11.9-19.6-20-34.3-20-21.8 0-39.5 17.7-39.5 39.5s17.7 39.5 39.5 39.5c14.6 0 27.4-8 34.2-19.8l-12.9-7.6zM97 66.2l.9-4.3h-4.2v-4.7h5.1L100 51h4.9l-1.2 6.1h3.8l1.2-6.1h4.8l-1.2 6.1h2.4v4.7h-3.3l-.9 4.3h4.2v4.7h-5.1l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6h-2.4v-4.7H97zm4.8 0h3.8l.9-4.3h-3.8l-.9 4.3z"></path>
+						</svg>
+					</LanguageSkill>
 
-			<div>
-				<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
-					<a href="https://devpost.com/software/futurefocus" target="_blank">FutureFocus</a>
-				</p>
-				<p class="font-notosansmono-condensed">
-					Groq AI powered career planner awarded best use of Terraform at RowdyHacks X
-				</p>
-			</div>
+					<LanguageSkill text="C++">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<path fill="#00599c" d="M118.766 95.82c.89-1.543 1.441-3.28 1.441-4.843V36.78c0-1.558-.55-3.297-1.441-4.84l-55.32 31.94Zm0 0"></path>
+							<path fill="#004482" d="m68.36 126.586 46.933-27.094c1.352-.781 2.582-2.129 3.473-3.672l-55.32-31.94L8.12 95.82c.89 1.543 2.121 2.89 3.473 3.672l46.933 27.094c2.703 1.562 7.13 1.562 9.832 0Zm0 0"></path>
+							<path fill="#659ad2" d="M118.766 31.941c-.891-1.546-2.121-2.894-3.473-3.671L68.359 1.172c-2.703-1.563-7.129-1.563-9.832 0L11.594 28.27C8.89 29.828 6.68 33.66 6.68 36.78v54.196c0 1.562.55 3.3 1.441 4.843L63.445 63.88Zm0 0"></path>
+							<path fill="#fff" d="M63.445 26.035c-20.867 0-37.843 16.977-37.843 37.844s16.976 37.844 37.843 37.844c13.465 0 26.024-7.247 32.77-18.91L79.84 73.335c-3.38 5.84-9.66 9.465-16.395 9.465-10.433 0-18.922-8.488-18.922-18.922 0-10.434 8.49-18.922 18.922-18.922 6.73 0 13.017 3.629 16.39 9.465l16.38-9.477c-6.75-11.664-19.305-18.91-32.77-18.91zM92.88 57.57v4.207h-4.207v4.203h4.207v4.207h4.203V65.98h4.203v-4.203h-4.203V57.57H92.88zm15.766 0v4.207h-4.204v4.203h4.204v4.207h4.207V65.98h4.203v-4.203h-4.203V57.57h-4.207z"></path>
+						</svg>
+					</LanguageSkill>
 
-			<div>
-				<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
-					<a href="https://github.com/joshuaeduque/dragonscroll" target="_blank">DragonScroll</a>
-				</p>
-				<p class="font-notosansmono-condensed">
-					Offline personal book logger for Android using Room DB and SharedPreferences libraries
-				</p>
+					<LanguageSkill text="Java">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<path fill="#0074BD" d="M47.617 98.12s-4.767 2.774 3.397 3.71c9.892 1.13 14.947.968 25.845-1.092 0 0 2.871 1.795 6.873 3.351-24.439 10.47-55.308-.607-36.115-5.969zm-2.988-13.665s-5.348 3.959 2.823 4.805c10.567 1.091 18.91 1.18 33.354-1.6 0 0 1.993 2.025 5.132 3.131-29.542 8.64-62.446.68-41.309-6.336z"></path><path fill="#EA2D2E" d="M69.802 61.271c6.025 6.935-1.58 13.17-1.58 13.17s15.289-7.891 8.269-17.777c-6.559-9.215-11.587-13.792 15.635-29.58 0 .001-42.731 10.67-22.324 34.187z"></path><path fill="#0074BD" d="M102.123 108.229s3.529 2.91-3.888 5.159c-14.102 4.272-58.706 5.56-71.094.171-4.451-1.938 3.899-4.625 6.526-5.192 2.739-.593 4.303-.485 4.303-.485-4.953-3.487-32.013 6.85-13.743 9.815 49.821 8.076 90.817-3.637 77.896-9.468zM49.912 70.294s-22.686 5.389-8.033 7.348c6.188.828 18.518.638 30.011-.326 9.39-.789 18.813-2.474 18.813-2.474s-3.308 1.419-5.704 3.053c-23.042 6.061-67.544 3.238-54.731-2.958 10.832-5.239 19.644-4.643 19.644-4.643zm40.697 22.747c23.421-12.167 12.591-23.86 5.032-22.285-1.848.385-2.677.72-2.677.72s.688-1.079 2-1.543c14.953-5.255 26.451 15.503-4.823 23.725 0-.002.359-.327.468-.617z"></path><path fill="#EA2D2E" d="M76.491 1.587S89.459 14.563 64.188 34.51c-20.266 16.006-4.621 25.13-.007 35.559-11.831-10.673-20.509-20.07-14.688-28.815C58.041 28.42 81.722 22.195 76.491 1.587z"></path><path fill="#0074BD" d="M52.214 126.021c22.476 1.437 57-.8 57.817-11.436 0 0-1.571 4.032-18.577 7.231-19.186 3.612-42.854 3.191-56.887.874 0 .001 2.875 2.381 17.647 3.331z"></path>
+						</svg>
+					</LanguageSkill>
+
+					<LanguageSkill text="Python">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<linearGradient id="python-original-a" gradientUnits="userSpaceOnUse" x1="70.252" y1="1237.476" x2="170.659" y2="1151.089" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#5A9FD4"></stop><stop offset="1" stop-color="#306998"></stop></linearGradient><linearGradient id="python-original-b" gradientUnits="userSpaceOnUse" x1="209.474" y1="1098.811" x2="173.62" y2="1149.537" gradientTransform="matrix(.563 0 0 -.568 -29.215 707.817)"><stop offset="0" stop-color="#FFD43B"></stop><stop offset="1" stop-color="#FFE873"></stop></linearGradient><path fill="url(#python-original-a)" d="M63.391 1.988c-4.222.02-8.252.379-11.8 1.007-10.45 1.846-12.346 5.71-12.346 12.837v9.411h24.693v3.137H29.977c-7.176 0-13.46 4.313-15.426 12.521-2.268 9.405-2.368 15.275 0 25.096 1.755 7.311 5.947 12.519 13.124 12.519h8.491V67.234c0-8.151 7.051-15.34 15.426-15.34h24.665c6.866 0 12.346-5.654 12.346-12.548V15.833c0-6.693-5.646-11.72-12.346-12.837-4.244-.706-8.645-1.027-12.866-1.008zM50.037 9.557c2.55 0 4.634 2.117 4.634 4.721 0 2.593-2.083 4.69-4.634 4.69-2.56 0-4.633-2.097-4.633-4.69-.001-2.604 2.073-4.721 4.633-4.721z" transform="translate(0 10.26)"></path><path fill="url(#python-original-b)" d="M91.682 28.38v10.966c0 8.5-7.208 15.655-15.426 15.655H51.591c-6.756 0-12.346 5.783-12.346 12.549v23.515c0 6.691 5.818 10.628 12.346 12.547 7.816 2.297 15.312 2.713 24.665 0 6.216-1.801 12.346-5.423 12.346-12.547v-9.412H63.938v-3.138h37.012c7.176 0 9.852-5.005 12.348-12.519 2.578-7.735 2.467-15.174 0-25.096-1.774-7.145-5.161-12.521-12.348-12.521h-9.268zM77.809 87.927c2.561 0 4.634 2.097 4.634 4.692 0 2.602-2.074 4.719-4.634 4.719-2.55 0-4.633-2.117-4.633-4.719 0-2.595 2.083-4.692 4.633-4.692z" transform="translate(0 10.26)"></path><radialGradient id="python-original-c" cx="1825.678" cy="444.45" r="26.743" gradientTransform="matrix(0 -.24 -1.055 0 532.979 557.576)" gradientUnits="userSpaceOnUse"><stop offset="0" stop-color="#B8B8B8" stop-opacity=".498"></stop><stop offset="1" stop-color="#7F7F7F" stop-opacity="0"></stop></radialGradient><path opacity=".444" fill="url(#python-original-c)" d="M97.309 119.597c0 3.543-14.816 6.416-33.091 6.416-18.276 0-33.092-2.873-33.092-6.416 0-3.544 14.815-6.417 33.092-6.417 18.275 0 33.091 2.872 33.091 6.417z"></path>
+						</svg>
+					</LanguageSkill>
+
+					<LanguageSkill text="JavaScript">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<path fill="#F0DB4F" d="M1.408 1.408h125.184v125.185H1.408z"></path><path fill="#323330" d="M116.347 96.736c-.917-5.711-4.641-10.508-15.672-14.981-3.832-1.761-8.104-3.022-9.377-5.926-.452-1.69-.512-2.642-.226-3.665.821-3.32 4.784-4.355 7.925-3.403 2.023.678 3.938 2.237 5.093 4.724 5.402-3.498 5.391-3.475 9.163-5.879-1.381-2.141-2.118-3.129-3.022-4.045-3.249-3.629-7.676-5.498-14.756-5.355l-3.688.477c-3.534.893-6.902 2.748-8.877 5.235-5.926 6.724-4.236 18.492 2.975 23.335 7.104 5.332 17.54 6.545 18.873 11.531 1.297 6.104-4.486 8.08-10.234 7.378-4.236-.881-6.592-3.034-9.139-6.949-4.688 2.713-4.688 2.713-9.508 5.485 1.143 2.499 2.344 3.63 4.26 5.795 9.068 9.198 31.76 8.746 35.83-5.176.165-.478 1.261-3.666.38-8.581zM69.462 58.943H57.753l-.048 30.272c0 6.438.333 12.34-.714 14.149-1.713 3.558-6.152 3.117-8.175 2.427-2.059-1.012-3.106-2.451-4.319-4.485-.333-.584-.583-1.036-.667-1.071l-9.52 5.83c1.583 3.249 3.915 6.069 6.902 7.901 4.462 2.678 10.459 3.499 16.731 2.059 4.082-1.189 7.604-3.652 9.448-7.401 2.666-4.915 2.094-10.864 2.07-17.444.06-10.735.001-21.468.001-32.237z"></path>
+						</svg>
+					</LanguageSkill>
+
+					<LanguageSkill text="SQL">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<defs>
+								<radialGradient id="b" cx="9.36" cy="10.57" fx="9.36" fy="10.57" r="7.07" gradientTransform="matrix(73.03125 0 0 37.1875 29.797 56.535)">
+									<stop offset="0" style="stop-color:#f2f2f2;stop-opacity:1"></stop>
+									<stop offset=".58" style="stop-color:#eee;stop-opacity:1"></stop>
+									<stop offset="1" style="stop-color:#e6e6e6;stop-opacity:1"></stop>
+								</radialGradient>
+								<linearGradient id="a" gradientUnits="userSpaceOnUse" x1="2.59" y1="10.16" x2="15.41" y2="10.16" gradientTransform="scale(7.11111)">
+									<stop offset="0" style="stop-color:#005ba1;stop-opacity:1"></stop>
+									<stop offset=".07" style="stop-color:#0060a9;stop-opacity:1"></stop>
+									<stop offset=".36" style="stop-color:#0071c8;stop-opacity:1"></stop>
+									<stop offset=".52" style="stop-color:#0078d4;stop-opacity:1"></stop>
+									<stop offset=".64" style="stop-color:#0074cd;stop-opacity:1"></stop>
+									<stop offset=".82" style="stop-color:#006abb;stop-opacity:1"></stop>
+									<stop offset="1" style="stop-color:#005ba1;stop-opacity:1"></stop>
+								</linearGradient>
+							</defs>
+							<path style="stroke:none;fill-rule:nonzero;fill:url(#a)" d="M64 36.55c-25.172 0-45.582-7.109-45.582-16.495v87.89c0 9.032 20.055 16.356 44.941 16.5H64c25.172 0 45.582-7.113 45.582-16.5v-87.89c0 9.172-20.41 16.496-45.582 16.496Zm0 0"></path>
+							<path style="stroke:none;fill-rule:nonzero;fill:#e8e8e8;fill-opacity:1" d="M109.582 20.055c0 9.172-20.41 16.496-45.582 16.496s-45.582-7.11-45.582-16.496c0-9.387 20.41-16.5 45.582-16.5s45.582 7.113 45.582 16.5"></path>
+							<path style="stroke:none;fill-rule:nonzero;fill:#50e6ff;fill-opacity:1" d="M98.988 18.703c0 5.832-15.718 10.524-34.988 10.524s-34.988-4.692-34.988-10.524C29.012 12.871 44.73 8.25 64 8.25s34.988 4.691 34.988 10.453"></path>
+							<path style="stroke:none;fill-rule:nonzero;fill:#198ab3;fill-opacity:1" d="M64 21.332a82.193 82.193 0 0 0-27.664 4.055A81.213 81.213 0 0 0 64 29.227a79.334 79.334 0 0 0 27.664-4.125A84.332 84.332 0 0 0 64 21.332Zm0 0"></path>
+							<path style="stroke:none;fill-rule:nonzero;fill:url(#b)" d="M91.734 81.066V56.891h-6.402v29.367h17.496v-5.192ZM40.961 69.191a13.064 13.064 0 0 1-3.629-2.203 3.13 3.13 0 0 1-.852-2.277 2.418 2.418 0 0 1 1.067-2.133 4.847 4.847 0 0 1 2.988-.855 11.533 11.533 0 0 1 7.11 2.062v-6.113a18.236 18.236 0 0 0-7.11-1.137 11.67 11.67 0 0 0-7.754 2.414 7.68 7.68 0 0 0-2.984 6.332c0 3.625 2.273 6.469 7.11 8.602 1.57.668 3.05 1.527 4.41 2.562a2.982 2.982 0 0 1 1.066 2.274c0 .879-.426 1.699-1.137 2.207a5.786 5.786 0 0 1-3.203.781 11.801 11.801 0 0 1-7.75-2.988v6.613a15.411 15.411 0 0 0 7.61 1.707c2.98.176 5.933-.648 8.39-2.348a7.681 7.681 0 0 0 2.348-6.468 7.458 7.458 0 0 0-1.778-4.977 17.225 17.225 0 0 0-5.902-4.055Zm37.262 11.305a16.634 16.634 0 0 0 2.347-8.957A16.509 16.509 0 0 0 78.223 64a12.87 12.87 0 0 0-4.977-5.332 14.228 14.228 0 0 0-7.113-1.852 15.015 15.015 0 0 0-7.68 1.922A13.217 13.217 0 0 0 53.262 64a17.48 17.48 0 0 0-1.848 8.105 16.06 16.06 0 0 0 1.707 7.114 12.526 12.526 0 0 0 4.906 5.261 14.679 14.679 0 0 0 7.11 2.133l6.117 7.11h8.605l-8.75-7.82a12.736 12.736 0 0 0 7.114-5.407Zm-7.114-1.777a6.673 6.673 0 0 1-5.402 2.488 6.538 6.538 0 0 1-5.406-2.559 10.842 10.842 0 0 1-2.063-7.109 10.903 10.903 0 0 1 2.063-7.113 7.104 7.104 0 0 1 5.547-2.63 6.181 6.181 0 0 1 5.336 2.63 11.533 11.533 0 0 1 1.918 7.113 10.353 10.353 0 0 1-1.993 7.18Zm0 0"></path>
+						</svg>
+					</LanguageSkill>
+
+					<LanguageSkill text="Svelte">
+						<!-- prettier-ignore -->
+						<svg viewBox="0 0 128 128">
+							<path d="M 110.43093,16.935847 C 98.552474,-0.076153 75.089104,-5.118154 58.130818,5.695846 l -29.793,19.000001 c -4.030441,2.529 -7.488786,5.871 -10.15468,9.814 -2.665895,3.943 -4.479469,8.399 -5.325138,13.083 a 25.478172,30.64 0 0 0 -0.572094,6.396 c 0.0183,5.831 1.446866,11.571 4.163485,16.729995 -2.546986,3.87201 -4.285721,8.22 -5.110602,12.78201 a 25.347621,30.483 0 0 0 0.345086,14.41199 c 1.072679,4.732998 3.078336,9.203998 5.900559,13.151998 11.877618,17.011 35.393374,22.053 52.299272,11.24 l 29.762238,-19.001 c 4.027946,-2.532 7.482126,-5.877998 10.141386,-9.824998 2.65841,-3.947 4.46282,-8.40699 5.29686,-13.093 0.3825,-2.107 0.57458,-4.244 0.5721,-6.386 -0.007,-5.81999 -1.41778,-11.550995 -4.11194,-16.708995 2.54616,-3.869 4.28489,-8.213 5.11143,-12.771 0.36921,-2.109 0.55713,-4.245 0.56212,-6.386 0.002,-7.595 -2.37152,-15 -6.78697,-21.178 z" fill="#ff3e00" id="path598" style="stroke-width:0.911885"></path><path d="m 55.218941,112.66204 a 28.463375,34.23 0 0 1 -5.953776,0.76 c -3.820895,0.001 -7.585244,-0.925 -10.970416,-2.7 -3.384341,-1.774 -6.288887,-4.343 -8.464177,-7.487 -2.655917,-3.716 -4.082827,-8.171 -4.080332,-12.74 a 15.657767,18.83 0 0 1 0.332613,-3.833 15.424937,18.55 0 0 1 0.719276,-2.782 l 0.562116,-1.708 1.51921,1.156 c 3.528195,2.591 7.470493,4.564 11.658097,5.834 l 1.104275,0.333 -0.103941,1.104 v 0.573 c -0.0025,1.381 0.427408,2.73 1.228174,3.854 0.646933,0.958 1.51838,1.744 2.537839,2.288 a 8.2621121,9.936 0 0 0 3.311997,0.837 8.2513022,9.923 0 0 0 1.79029,-0.229 7.2717563,8.745 0 0 0 1.832699,-0.802 l 29.760566,-19.094 c 0.892236,-0.566 1.627311,-1.349 2.135377,-2.276 0.507236,-0.927 0.771662,-1.968 0.768337,-3.026 -0.0084,-1.381 -0.449027,-2.725 -1.259773,-3.844 -0.656912,-0.946 -1.533347,-1.718 -2.553637,-2.252 a 8.3128357,9.997 0 0 0 -3.307008,-0.81 8.246313,9.917 0 0 0 -1.79029,0.23 6.9383115,8.344 0 0 0 -1.821058,0.801 l -11.346268,7.25 a 24.375558,29.314 0 0 1 -6.04774,2.656 c -1.945787,0.502 -3.945624,0.758 -5.954608,0.76 -3.820063,0 -7.582749,-0.926 -10.967089,-2.698 -3.384341,-1.772 -6.289718,-4.338 -8.467502,-7.478 -2.652591,-3.718 -4.079502,-8.172 -4.080334,-12.74 0.0016,-1.285 0.113089,-2.567 0.332615,-3.833 0.509728,-2.816 1.597374,-5.495 3.196411,-7.867 1.598207,-2.373 3.67205,-4.387 6.089317,-5.914 l 29.792168,-18.99 c 1.869286,-1.19 3.908205,-2.09 6.04774,-2.667 1.945787,-0.499 3.945625,-0.75 5.953776,-0.75 3.82921,-0.01 7.603538,0.91 10.999519,2.681 3.395981,1.77 6.311338,4.34 8.497439,7.486 2.636787,3.727 4.045417,8.184 4.028777,12.75 a 15.748404,18.939 0 0 1 -0.33344,3.844 15.407475,18.529 0 0 1 -0.71845,2.781 l -0.56211,1.708 -1.519216,-1.114 c -3.525699,-2.595 -7.468833,-4.568 -11.658096,-5.834 l -1.104275,-0.343 0.103941,-1.105 v -0.572 c 0,-1.385 -0.429072,-2.735 -1.228174,-3.865 -0.65608,-0.945 -1.530022,-1.716 -2.549481,-2.25 a 8.3086779,9.992 0 0 0 -3.301186,-0.813 8.2213671,9.887 0 0 0 -1.768671,0.271 6.8185708,8.2 0 0 0 -1.831867,0.802 l -29.792165,18.99 a 5.8797701,7.071 0 0 0 -1.836857,1.79 4.7505482,5.713 0 0 0 -0.962914,2.377 5.0365955,6.057 0 0 0 -0.135541,1.104 c -8.31e-4,1.378 0.42824,2.722 1.228174,3.844 0.655248,0.945 1.530021,1.717 2.548649,2.25 a 8.2986996,9.98 0 0 0 3.301186,0.812 8.2471446,9.918 0 0 0 1.79029,-0.23 6.9433007,8.35 0 0 0 1.832699,-0.801 l 11.367057,-7.292 a 24.218399,29.125 0 0 1 6.04774,-2.656 28.52574,34.305 0 0 1 5.953776,-0.76 c 3.821727,0 7.586076,0.925 10.972078,2.697 3.386003,1.772 6.293877,4.339 8.473325,7.48 2.652591,3.717 4.079498,8.171 4.080338,12.74 0.003,1.299 -0.11226,2.596 -0.34343,3.874 -0.506403,2.817 -1.594046,5.497 -3.192254,7.87 -1.599037,2.372 -3.673715,4.385 -6.093476,5.911 l -29.739779,18.99 a 24.308205,29.233 0 0 1 -6.057719,2.667 z" fill="#ffffff" id="path600" style="stroke-width:0.911885"></path>
+						</svg>
+					</LanguageSkill>
+				</div>
+			</div>
+			<div class="flex flex-col gap-4">
+				<p class="font-notosansmono-condensed font-bold">projects</p>
+				<div>
+					<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
+						<a href="https://github.com/joshuaeduque/ps3mapi" target="_blank">PS3MAPI</a>
+					</p>
+					<p class="font-notosansmono-condensed">
+						Remote communications library for Sony's PlayStation 3 written in C#
+					</p>
+				</div>
+
+				<div>
+					<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
+						<a href="https://devpost.com/software/futurefocus" target="_blank">FutureFocus</a>
+					</p>
+					<p class="font-notosansmono-condensed">
+						Groq AI powered career planner awarded best use of Terraform at RowdyHacks X
+					</p>
+				</div>
+
+				<div>
+					<p class="font-notosansmono-condensed underline hvr-sweep-to-right">
+						<a href="https://github.com/joshuaeduque/dragonscroll" target="_blank">DragonScroll</a>
+					</p>
+					<p class="font-notosansmono-condensed">
+						Offline personal book logger for Android using Room DB and SharedPreferences libraries
+					</p>
+				</div>
 			</div>
 		</div>
-	</div>
-
-	<div id="about-me" class="p-4">
-		<p class="font-notosansmono-condensed font-bold">about me</p>
-		<p class="font-notosansmono-condensed">
-			My name is Joshua Duque, and I’m a computer science student at the University of Texas at San
-			Antonio. I grew up in a small town with a population of about 3,000, spending my childhood
-			with my mother and older brother. In our living room sat a CRT monitor connected to a desktop
-			running Windows ME, where my mom played solitaire and my brother watched Flash Player videos.
-			I can’t pinpoint the exact moment it happened, but the hum of the machine and the glow of the
-			screen sparked a fascination with computers that’s stuck with me ever since.
-		</p>
-		<br />
-		<p class="font-notosansmono-condensed">
-			As a teenager, I started learning C++ and basic x86/PowerPC assembly to create cheats for my
-			favorite online games. I loved figuring out how each game worked and sharing in-game resources
-			with my friends after a breakthrough. Later, I joined my high school’s robotics team as the
-			only programmer, which introduced me to hardware components and embedded development—something
-			I still enjoy working with today.
-		</p>
-		<br />
-		<p class="font-notosansmono-condensed">
-			After graduating high school, I was uncertain about pursuing higher education right away.
-			Instead, I spent time with family and worked locally during the COVID pandemic. However,
-			someone close to me encouraged me to aim beyond the boundaries of my small town. With their
-			support, I completed an associate degree at my local community college and decided to pursue a
-			bachelor’s degree in computer science, turning my long-standing passion for technology into a
-			career path.
-		</p>
-		<br />
-		<p class="font-notosansmono-condensed">
-			My biggest hope is to inspire others from similar backgrounds to step out of their comfort
-			zones and discover what’s truly possible for themselves. One day, I aspire to give back to my
-			community in a meaningful way that genuinely impacts those who need it most. Thank you for
-			taking the time to read, and I hope you have an amazing day :&#41
-		</p>
 	</div>
 {/if}
 
@@ -126,9 +161,11 @@
 	import { fade, fly } from 'svelte/transition';
 	import { expoOut } from 'svelte/easing';
 
+	import LanguageSkill from '$lib/components/LanguageSkill/LanguageSkill.svelte';
+
 	const flyDuration = 1000;
 
-	let mounted = false;
+	let mounted = $state(false);
 
 	onMount(async () => {
 		await document.fonts.ready;

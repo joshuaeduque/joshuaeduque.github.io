@@ -3,7 +3,7 @@
 	<p class="font-notosansmono-condensed">
 		You may have to scroll / zoom depending on your screen size
 	</p>
-	<button class="font-notosansmono-condensed underline hvr-sweep-to-right" on:click={downloadResume}>download</button>
+	<button class="font-notosansmono-condensed underline hvr-sweep-to-right" onclick={downloadResume}>download</button>
 	<canvas id="pdf-canvas"></canvas>
 </div>
 
