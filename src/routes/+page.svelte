@@ -22,7 +22,7 @@
 							<a href="/resume">resume</a>
 						</p>
 						<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
-							<a href="https://github.com/joshuaeduque">github</a>
+							<a href="https://github.com/joshuaeduque" target="_blank">github</a>
 						</p>
 						<p class="font-notosansmono-condensed underline w-fit hvr-sweep-to-right">
 							<a href="/about">about me</a>
