@@ -1,0 +1,20 @@
+@import '@fontsource-variable/roboto/wght.css';
+@import '@fontsource-variable/roboto-mono/wght.css';
+@import '@fontsource/libre-barcode-128-text';
+@import 'tailwindcss';
+
+html {
+	scroll-behavior: smooth;
+}
+
+@theme {
+	--font-sans: 'Roboto Variable', sans-serif;
+	--font-mono: 'Roboto Mono Variable', monospace;
+	--font-barcode: 'Libre Barcode 128 Text', system-ui;
+	--animate-fade-in: fade-in 0.4s ease-out;
+}
+
+@keyframes fade-in {
+	from { opacity: 0; }
+	to { opacity: 1; }
+}
