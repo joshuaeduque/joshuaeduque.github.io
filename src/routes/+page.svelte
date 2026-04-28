@@ -31,17 +31,17 @@
 		{
 			icon: LinkedIn,
 			label: 'linkedin',
-			href: '/'
+			href: 'https://linkedin.com/in/joshua-d-9117a5352'
 		},
 		{
 			icon: GitHub,
 			label: 'github',
-			href: '/'
+			href: 'https://github.com/joshuaeduque'
 		},
 		{
 			icon: Email,
 			label: 'email',
-			href: '/'
+			href: 'mailto:joshuaeduque@gmail.com'
 		},
 		{
 			icon: Egg,
